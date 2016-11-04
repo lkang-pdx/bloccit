@@ -17,6 +17,17 @@ topics = Topic.all
     body:   RandomData.random_paragraph
   )
 end
+
+# Create Podcasts
+50.times do
+  Podcast.create!(
+    topic: topics.sample,
+    title:  RandomData.random_sentence,
+    body:   RandomData.random_paragraph,
+    price: 99
+  )
+end
+
 posts = Post.all
 
 # Create Comments
@@ -28,6 +39,7 @@ posts = Post.all
 end
 
 puts "Seed finished"
+puts "#{Podcast.count} podcasts created"
 puts "#{Topic.count} topics created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"

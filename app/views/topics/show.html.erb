@@ -19,8 +19,22 @@
         </div>
       </div>
     <% end %>
+    <p>Podcasts</p>
+    <% @topic.podcasts.each do |podcast| %>
+      <div class="media">
+        <div class="media-body">
+          <h4 class="media-heading">
+            <%= link_to podcast.title, topic_podcast_path(@topic, podcast) %>
+          </h4>
+          <small>
+            submitted <%= time_ago_in_words(podcast.created_at) %> ago <br>
+          </small>
+        </div>
+      </div>
+    <% end %>
   </div>
   <div class="col-md-4">
     <%= link_to "New Post", new_topic_post_path(@topic), class: 'btn btn-success' %>
+    <%= link_to "New Podcast", new_topic_podcast_path(@topic), class: 'btn btn-success' %>
     <%= link_to "Delete Topic", @topic, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this topic?' } %>
   </div>
