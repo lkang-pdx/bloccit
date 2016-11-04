@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :topics do
     resources :posts, except: [:index]
-    resources :podcasts, only: [:show, :new, :edit]
+    resources :podcasts, except: [:index]
   end
 
   get 'about' => 'welcome#about'
