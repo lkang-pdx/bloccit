@@ -73,6 +73,7 @@ RSpec.describe Post, type: :model do
         expect(post.rank).to eq (old_rank - 1)
       end
     end
+  end
 
     describe "#create_vote" do
       it "sets the post up_votes to 1" do
@@ -90,4 +91,3 @@ RSpec.describe Post, type: :model do
       end
     end
   end
- end
