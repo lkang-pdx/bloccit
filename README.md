@@ -1,5 +1,5 @@
 ## Bloccit
-#### Written in Ruby, HTML & CSS.
+#### Written in Ruby, Haml & CSS.
 
 You can checkout Bloccit [here](https://afternoon-crag-43986.herokuapp.com/). Try this Reddit replica today!
 

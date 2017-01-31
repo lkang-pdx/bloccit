@@ -12,6 +12,7 @@ end
 # #2
 group :development do
   gem 'sqlite3'
+  gem 'erb2haml'
 end
 
 group :development, :test do
@@ -36,3 +37,5 @@ gem 'bootstrap-sass'
 gem 'bcrypt'
 
 gem 'figaro', '1.0'
+
+gem 'haml'
